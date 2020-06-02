@@ -39,7 +39,55 @@ function soma(n1,n2){
 
 }
 
-alert(soma(n1,n2));*/
+alert(soma(n1,n2));
 
+function fn() {
+    log('Hosting de função');
+    
+    function log(value){
+        console.log(value);
+    }
+}
 
+fn();
 
+const user = {
+    name : 'Julius',
+    lastName: 'Dantas'
+};
+
+function getUserWithFullName(user) {
+    return {
+        ...user,
+        fullName: `${user.name} ${user.lastName}`
+    }
+}
+
+const userWithFullName = getUserWithFullName(user);
+
+console.log(userWithFullName);
+
+const students = [
+    {
+        name: 'Grace',
+        grade: 7
+    },
+    {
+        name: 'jenifer',
+        grade: 4
+    },
+    {
+        name: 'paul',
+        grade: 10
+    }
+];
+
+function getApprovedStudents(studentsList){
+    return studentsList.filter(student => student.grade >= 7);
+}
+
+console.log('Alunos aprovados: ');
+console.log(getApprovedStudents(students));
+
+console.log('\nLista de Alunos: ')
+console.log(students);*/
